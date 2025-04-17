@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keycodie AI Assistant</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body { 
+      width: 300px; 
+      padding: 10px; 
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color, white);
+      color: var(--text-color, black);
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        --background-color: #1e1e1e;
+        --text-color: #e0e0e0;
+        background-color: var(--background-color);
+        color: var(--text-color);
+      }
+    }
+    #chat-container {
+      height: 400px;
+      overflow-y: auto;
+      border: 1px solid var(--border-color, #ddd);
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: var(--chat-background, #f9f9f9);
+    }
+    @media (prefers-color-scheme: dark) {
+      #chat-container {
+        --border-color: #444;
+        --chat-background: #2c2c2c;
+        border-color: var(--border-color);
+        background-color: var(--chat-background);
+      }
+    }
+    #user-input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      background-color: var(--input-background, white);
+      color: var(--input-text, black);
+      border: 1px solid var(--input-border, #ddd);
+      outline: none;
+      transition: border-color 0.2s;
+      border-radius: 4px;
+    }
+    #user-input:focus {
+      border-color: rgba(0,123,255,0.5);
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.1);
+    }
+    @media (prefers-color-scheme: dark) {
+      #user-input {
+        --input-background: #333;
+        --input-text: #e0e0e0;
+        --input-border: #555;
+        background-color: var(--input-background);
+        color: var(--input-text);
+        border-color: var(--input-border);
+      }
+    }
+    #send-btn {
+      background-color: var(--button-background, #007bff);
+      color: var(--button-text, white);
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      outline: none;
+      border-radius: 4px;
+      transition: transform 0.1s, background-color 0.2s;
+    }
+    #send-btn:active {
+      transform: scale(0.95);
+    }
+    #send-btn:focus {
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.1);
+    }
+    @media (prefers-color-scheme: dark) {
+      #send-btn {
+        --button-background: #0056b3;
+        --button-text: white;
+        background-color: var(--button-background);
+        color: var(--button-text);
+      }
+    }
+    .user, .ai {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .user {
+      background-color: var(--user-background, #e6f2ff);
+      color: var(--user-text, #333);
+    }
+    .ai {
+      background-color: var(--ai-background, #f0f0f0);
+      color: var(--ai-text, #333);
+    }
+    @media (prefers-color-scheme: dark) {
+      .user {
+        --user-background: #004466;
+        --user-text: #e0e0e0;
+        background-color: var(--user-background);
+        color: var(--user-text);
+      }
+      .ai {
+        --ai-background: #333;
+        --ai-text: #e0e0e0;
+        background-color: var(--ai-background);
+        color: var(--ai-text);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-container"></div>
+  <input type="text" id="user-input" placeholder="Ask Keycodie...">
+  <button id="send-btn">Send</button>
+  <script src="popup.js"></script>
+</body>
+</html>

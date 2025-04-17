@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keycodie Extension Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+        .setting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #2c2c2c;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Keycodie Extension Settings</h1>
+    <div class="setting">
+        <span>Enable Keycodie Popup</span>
+        <input type="checkbox" id="enablePopup">
+    </div>
+    <button id="saveSettings">Save Settings</button>
+
+    <script src="settings.js"></script>
+</body>
+</html>
